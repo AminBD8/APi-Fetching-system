@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comment API</title>
+  <link rel="stylesheet" href="./CSS/comment.css" />
+
+</head>
+<body>
+
+  <!-- ========== Navigation Bar ========== -->
+
+  <nav>
+    <div class="nav-bar">
+      <h3 class="logo-page"><a href="./index.html">APi</a></h3>
+
+      <div class="menu">
+        <ul class="nav-links">
+          <li><a href="./index.html">World</a></li>
+          <li><a href="#">Food Recipe</a></li>
+          <li><a href="./User.html">User</a></li>
+          <li><a href="./post.html">Post</a></li>
+          <li><a href="./comment.html">Comment</a></li>
+          <li><a href="./album.html">Album</a></li>
+          <li><a href="#">ToDo</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>💬 Comments</h1>
+
+    <form id="commentForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="body" placeholder="Your Comment" required></textarea>
+      <button type="submit">Post Comment</button>
+    </form>
+
+    <div id="commentList" class="comment-list"></div>
+  </div>
+
+  <script src="./JS/comment.js"></script>
+</body>
+</html>

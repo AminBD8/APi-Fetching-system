@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Album API</title>
+  <link rel="stylesheet" href="./CSS/album.css">
+</head>
+<body>
+
+      <!-- ========== Navigation Bar ========== -->
+
+  <nav>
+    <div class="nav-bar">
+      <h3 class="logo-page"><a href="./index.html">APi</a></h3>
+
+      <div class="menu">
+        <ul class="nav-links">
+          <li><a href="./index.html">World</a></li>
+          <li><a href="#">Food Recipe</a></li>
+          <li><a href="./User.html">User</a></li>
+          <li><a href="./post.html">Post</a></li>
+          <li><a href="./comment.html">Comment</a></li>
+          <li><a href="./album.html">Album</a></li>
+          <li><a href="#">ToDo</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>📸 Album Gallery</h1>
+
+    <form id="albumForm">
+      <input type="text" id="albumTitle" placeholder="New Album Title" required>
+      <button type="submit">Add Album</button>
+    </form>
+
+    <div id="albumList" class="album-list"></div>
+  </div>
+
+  <script src="./JS/album.js"></script>
+</body>
+</html>

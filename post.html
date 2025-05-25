@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Post APi</title>
+    <link rel="stylesheet" href="./CSS/post.css" />
+    
+</head>
+<body>
+
+    <!-- ========== Navigation Bar ========== -->
+
+<nav>
+    <div class="nav-bar">
+        <h3 class="logo-page"><a href="./index.html">APi</a></h3>
+
+        <div class="menu">
+        <ul class="nav-links">
+            <li><a href="./index.html">World</a></li>
+            <li><a href="#">Food Recipe</a></li>
+            <li><a href="./User.html">User</a></li>
+            <li><a href="./post.html">Post</a></li>
+            <li><a href="./comment.html">Comment</a></li>
+            <li><a href="./album.html">Album</a></li>
+            <li><a href="#">ToDo</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
+
+    <div class="container">
+    <h1>📝 Post Manager</h1>
+
+    <form id="postForm">
+        <input type="text" id="title" placeholder="Post Title" required />
+        <textarea id="body" placeholder="Post Content" required></textarea>
+        <button type="submit">Create Post</button>
+    </form>
+
+    <div id="postList" class="post-list"></div>
+    </div>
+
+    <script src="./JS/post.js"></script>
+</body>
+</html>
