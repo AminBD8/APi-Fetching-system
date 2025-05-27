@@ -10,7 +10,14 @@
 
 body {
   background-color: #E4E9F7;
+  width: 100%;
+  min-height: 100vh;
+  --bgColor: hsl(0, 0%, 98%);
+  --fontColor: hsl(200, 15%, 8%);
+
 }
+
+.container
 
 /* header {
   position: relative;

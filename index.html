@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./CSS/style.css">
 
   <!--========== boxicons css ==========-->
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <title>APi</title>
 </head>
@@ -34,25 +34,32 @@
       <div class="menu">
         <ul class="nav-links">
           <li><a href="./index.html">World</a></li>
-          <li><a href="#">Food Recipe</a></li>
+          <li><a href="./food.html">Food Recipe</a></li>
           <li><a href="./User.html">User</a></li>
           <li><a href="./post.html">Post</a></li>
           <li><a href="./comment.html">Comment</a></li>
           <li><a href="./album.html">Album</a></li>
-          <li><a href="#">ToDo</a></li>
+
         </ul>
       </div>
     </div>
   </nav>
 
     <div class="container">
-        <div class="logo-world">
           <h1>Where In The World?</h1>
+        <button class="toggle"><i class="far fa-moon"></i>Dark Mode</button>
+    </div>
+    <div class="container">
+      <div class="form-control">
+        <input type="text" placeholder="Search For Country">
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="dropDownCon">
+        <div class="dropDown">
+          <P>Filter By Region</P>
+          <button><i class="fas fa-chevron-down"></i></button>
         </div>
-        <button id="dark-mode-btn" class="dark-mode-btn">
-          <i class="ri-moon-line"></i>Dark Mode
-        </button>
-
+      </div>
     </div>
 
 

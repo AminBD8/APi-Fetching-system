@@ -7,6 +7,25 @@
 </head>
 <body>
 
+    <!-- ========== Navigation Bar ========== -->
+
+  <nav>
+    <div class="nav-bar">
+      <h3 class="logo-page"><a href="./index.html">APi</a></h3>
+
+      <div class="menu">
+        <ul class="nav-links">
+          <li><a href="./index.html">World</a></li>
+          <li><a href="./food.html">Food Recipe</a></li>
+          <li><a href="./User.html">User</a></li>
+          <li><a href="./post.html">Post</a></li>
+          <li><a href="./comment.html">Comment</a></li>
+          <li><a href="./album.html">Album</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
     <div class="container">
         <h2>Recipe Finder</h2>
         <p>Search watering recipe to satisfy your craving.</p>
@@ -19,8 +38,17 @@
 
 
 
+
     <div class="recipes" id="recipes"></div>
     <div class="notFound" id="notFound">Search your favorite recipes!</div>
+
+    <div  id ="categories"></div>
+
+    <div class="popup-card" id="popupCard">
+      <button class="close-btn" onclick="closeRecipe()">Close</button>
+      <h3 id="recipeTitle"></h3>
+      <p id="recipeDetails"></p>
+    </div>
 
   <script src="./JS/food.js"></script>
 </body>
