@@ -35,6 +35,8 @@ function searchRecipes(){
         card.innerHTML =`
           <img src="${meal.strMealThumb}" alt="${meal.srtMeal}">
           <h3>${meal.strMeal}</h3>
+          <p>${meal.strCategory}</p>
+          <p style="color:red">${meal.strArea}</p>
           <button onclick= "viewRecipes(${meal.idMeal})">View Recipes</button>
         `;
 
