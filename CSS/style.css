@@ -6,16 +6,33 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins",sans-serif;
+  list-style-type: none;
 }
 
-body {
-  background-color: #E4E9F7;
-  --bgColor: hsl(0, 0%, 98%);
-  --fontColor: hsl(200, 15%, 8%);
+
+:root{--text-color:hsl(200, 15%, 8%); 
+  --shadow-color: hsl(0, 0%, 52%);
+  --main-bg-color: hsl(0, 0%, 98%);
+  --accent-color: hsl(0, 0%, 100%);
 
 }
 
-.container
+[data-theme = 'dark'] {
+  --text-color:hsl(0, 0%, 100%);
+  --shadow-color:hsl(0, 0%, 52%);
+  --main-bg-color:hsl(207, 26%, 17%);
+  --accent-color: hsl(209, 23%, 22%);
+}
+
+
+  body {
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  transition: background-color 250ms ease, color 250ms ease;
+  
+
+}
+
 
 /* header {
   position: relative;
@@ -81,7 +98,7 @@ nav {
   left: 0;
   height: 70px;
   width: 100%;
-  background-color: #161616;   /*  nav bar color  */
+  background-color: #161616;    
 }
 
 nav .nav-bar {
@@ -89,7 +106,7 @@ nav .nav-bar {
   height: 100%;
   max-width: 1000px;
   width: 100%;
-  background-color: #161616;   /* nav bar color  */
+  background-color: #161616;   
   margin: 0 auto;
   padding: 0 30px;
   display: flex;
@@ -129,7 +146,7 @@ nav .nav-bar .logo-page a {
   position: absolute;
   left: 50%;
   bottom: 0;
-  /* transform: translateX(50%); */
+
   height: 6px;
   width: 6px;
   border-radius: 50%;
@@ -145,10 +162,177 @@ nav .nav-bar .logo-page a {
 
 .nav-links li a:hover {
   color: rgb(14, 255, 14);
-}
+} 
 
 /* ========== World CSS Start ========== */
 
+img {
+  max-width: 100%;
+  display: block;
+}
 
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+header {
+  background-color: var(--accent-color);
+  padding: 1rem 0;
+}
+
+header .world {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 65px;
+}
+
+
+
+.dark-mode-btn {
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-color);
+  padding: .5rem 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: 0;
+}
+
+main {
+  padding: 3rem 0;
+}
+
+.user-input {
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-input .search-box {
+  background-color: var(--accent-color);
+  box-shadow: 0 0 5px var(--shadow-color);
+  outline: 1px solid var(--main-bg-color);
+  border-radius: .25rem;
+}
+
+.user-input .search-box i {
+  padding: 0 1rem;
+}
+
+.user-input .search-box input,
+.user-input .select-box select {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  padding: .75rem;
+}
+
+.user-input .search-box input {
+  width: 400px;
+  border: 0;
+  outline: 0;
+}
+
+.user-input .select-box select {
+  box-shadow: 0 0 5px var(--shadow-color); 
+  border: 0;
+  outline: 1px solid var(--main-bg-color);
+}
+
+.country-list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 4rem;
+}
+
+.country-list-container .country-item {
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  box-shadow: 0 0 5px var(--shadow-color);
+  border: 0;
+  border-radius: .35rem;
+  overflow: hidden;
+}
+
+.country-list-container .country-item img {
+  width: 100%;
+  height: 180px;
+  margin-bottom: 1rem;
+}
+
+.country-list-container .country-item .country-quick-info {
+  padding: 1rem 1.5rem 2.5rem 1.5rem;
+  text-align: left;
+}
+
+.country-list-container .country-item .country-quick-info h2 {
+  margin-bottom: 1rem;
+}
+
+.country-list-container .country-item .country-quick-info p {
+  margin-bottom: .5rem;
+}
+
+.country-detail-container {
+  display: none;
+}
+
+.country-detail-container.show {
+  display: block;
+}
+
+.country-detail-container .back-btn {
+  cursor: pointer;
+    background-color: var(--accent-color);
+  color: var(--text-color);
+  padding: .5rem 2rem;
+  margin-bottom: 4rem;
+  border: 0;
+}
+
+.country-detail-container .country-information{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+} 
+
+.country-detail-container .country-information .country-flag img{
+  width: 100%;
+}
+
+.country-detail-container .country-information .country-details h1 {
+  margin: 1.5rem 0.2rem 0;
+}
+
+.country-detail-container .country-information .country-details ul {
+  margin-bottom: 4rem;
+}
+
+.country-detail-container .country-information .country-details ul li {
+  margin-bottom: .5rem;
+}
+
+.country-detail-container .country-information .country-details .country-border strong {
+  margin-right: .5rem;
+}
+
+.country-detail-container .country-information .country-details .country-border span {
+  background-color: var(--accent-color);
+  padding: .25rem 1.25rem;
+}
+
+@media (max-width: 1024px){
+  .container {
+    width: 80%;
+  }
+  
+  .country-list-container{
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
 
 /* ========== World CSS End ========== */

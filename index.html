@@ -3,27 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-  
   <link rel="stylesheet" href="./CSS/style.css">
 
   <!--========== boxicons css ==========-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
   <title>APi</title>
 </head>
 <body>
 
-  <div class="intro">
-    <h1 class="logo-header">
-      <span class="logo">AP</span><span class="logo">i</span>
-    </h1>
-  </div>
-  
-  <!-- <header>
-    <h4>APi</h4>
-  </header> -->
+
+
 
   <!-- ========== Navigation Bar ========== -->
 
@@ -45,24 +36,47 @@
     </div>
   </nav>
 
-    <div class="container">
-          <h1>Where In The World?</h1>
-        <button class="toggle"><i class="far fa-moon"></i>Dark Mode</button>
-    </div>
-    <div class="container">
-      <div class="form-control">
-        <input type="text" placeholder="Search For Country">
-        <i class="fas fa-search"></i>
+<header>
+  <div class="container">
+    <div class="world">
+      <div class="logo-world">
+        <h1>Where In The World?</h1>
       </div>
-      <div class="dropDownCon">
-        <div class="dropDown">
-          <P>Filter By Region</P>
-          <button><i class="fas fa-chevron-down"></i></button>
+      <button id="dark-mode-btn" class="dark-mode-btn">
+        <i class='bx bx-moon'></i>Dark Mode
+      </button>
+    </div>
+  </div>
+</header>
+
+  <main>
+    <div class="container">
+      <div class="user-input">
+        <div class="search-box">
+          <i class='bx bx-search'></i>
+          <input type="text" id="search-input" placeholder="Search For A Country...">
+        </div>
+
+        <div class="select-box">
+          <select name="filter-input" id="filter-input">
+            <option value="">Filter By Region</option>
+            <option value="africa">Africa</option>
+            <option value="america">America</option>
+            <option value="asia">Asia</option>
+            <option value="europe">Europe</option>
+            <option value="oceania">Oceania</option>
+          </select>
         </div>
       </div>
+
+      <div id="country-list-container" class="country-list-container">
+      </div>
+
     </div>
+    <div id="country-detail-container" class="country-detail-container">
 
-
+    </div>
+  </main>
 
   <script src="./JS/script.js"></script>
 </body>
